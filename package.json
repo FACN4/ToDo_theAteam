@@ -1,0 +1,24 @@
+{
+  "name": "to_do_app_a_team",
+  "version": "1.0.0",
+  "description": "Repo for \"ToDo app\" of the \"A Team\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN4/ToDo_theAteam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN4/ToDo_theAteam/issues"
+  },
+  "homepage": "https://github.com/FACN4/ToDo_theAteam#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
