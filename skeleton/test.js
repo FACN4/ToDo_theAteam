@@ -50,17 +50,7 @@ test("refacrtor markTodo function", function(t) {
   var obj1={id:0,desc:'rrr',done:false};
   var obj2={id:1,desc:'rrasd2',done:false};
   var obj2={id:2,desc:'63mslwwys',done:true};
-  t.deepEqual(logic.markTodo([obj1],0),obj1,"return the same array");
-  t.deepEqual(logic.markTodo([obj1],2),obj1,"return the same array if given invalid id");
-
-
-
-
-
-
-
+  t.deepEqual(logic.markTodo([obj1],0),[{id:0,desc:'rrr',done:true}],"return the same array with markTodo changed for the given id");
+  t.deepEqual(logic.markTodo([obj1],2),[obj1],"return the same array if given invalid id");
   t.end();
 });
-
-
-
