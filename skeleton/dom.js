@@ -27,8 +27,10 @@
 
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
+    var Strike = document.createElement("strike");
     markTodoButtonNode.addEventListener("click", function(event) {
-      var newState = todoFunctions.markTodo(state, todo.id);
+      var newState = todoFunctions.markTsodo(state, todo.id);
+      
       update(newState);
     });
     todoNode.appendChild(markTodoButtonNode);
@@ -52,7 +54,7 @@
       event.preventDefault();
 
       var description = document.getElementsByName("description")[0].value;
-      console.log(description);
+
       var newObj = {};
       newObj.description = description;
       // hint: todoFunctions.addTodo
