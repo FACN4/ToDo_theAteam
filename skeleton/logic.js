@@ -22,25 +22,21 @@ var todoFunctions = {
   cloneArrayOfObjects: function(todos) {
     return todos.map(function(todo) {
       return JSON.parse(JSON.stringify(todo));
-
     });
   },
 
-
   addTodo: function(todos, newTodo) {
-
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
 
-  //var updatedTodos;
-  newTodo.id=todoFunctions.generateId();
-  updatedTodos=todoFunctions.cloneArrayOfObjects(todos); // copy the array of objects
-  updatedTodos=updatedTodos.concat(newTodo);
-  return updatedTodos;
-
-
+    //var updatedTodos;
+    newTodo.id = todoFunctions.generateId();
+    newTodo.done = false;
+    updatedTodos = todoFunctions.cloneArrayOfObjects(todos); // copy the array of objects
+    updatedTodos = updatedTodos.concat(newTodo);
+    return updatedTodos;
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
@@ -53,21 +49,18 @@ var todoFunctions = {
     });
 
     return arr;
-
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-    var arr=todoFunctions.cloneArrayOfObjects(todos);
-    arr.forEach(function(obj){
-      if(obj.id==idToMark){
-        if("done" in obj){
-          obj.done= !obj.done;
-        }
+    var arr = todoFunctions.cloneArrayOfObjects(todos);
+    arr.forEach(function(obj) {
+      if (obj.id == idToMark) {
+        obj.done = !obj.done;
       }
-    })
+    });
     return arr;
   },
   sortTodos: function(todos, sortFunction) {
