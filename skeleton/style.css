@@ -6,7 +6,30 @@ body {
   padding: 0;
   background: #eeeeee;
 }
-
+.btn-delete {
+  background-color: #E84248;
+border: none;
+color: white;
+padding: 10px 10px;
+text-align: center;
+text-decoration: none;
+display: block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+ .btn-mark {
+   background-color: #39BC0A;
+border: none;
+color: white;
+padding: 10px 10px;
+text-align: center;
+text-decoration: none;
+display: block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+ }
 #main-content {
   margin-top: 20px;
   padding: 5px;
@@ -103,6 +126,7 @@ li {
   #main-content {
     margin: 20px auto 0px auto;
     width: 80%;
+
   }
 }
 
@@ -114,4 +138,5 @@ li {
 
 @media only screen and (min-width: 1001px) {
   /* Test */
+
 }

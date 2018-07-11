@@ -34,6 +34,7 @@
 
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
+
     var strike = document.createElement("strike");
     markTodoButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
