@@ -5,12 +5,19 @@
   // This is the dom node where we will keep our todo
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
-
-  var state = [
-    { id: -3, description: "first todo" },
-    { id: -2, description: "second todo" },
-    { id: -1, description: "third todo" }
-  ]; // this is our initial todoList
+  var state = [];
+  if ( !localStorage.getItem("myList")) {
+    // Code for localStorage/sessionStorage.
+    state = [
+      { id: -3, description: "first todo" },
+      { id: -2, description: "second todo" },
+      { id: -1, description: "third todo" }
+    ]; // this is our initial todoList
+  } else {
+    // Sorry! No Web Storage support..
+    console.log(localStorage.getItem("myList"));
+    state = JSON.parse(localStorage.getItem("myList"));
+  }
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -36,10 +43,10 @@
 
     // add span holding description
     var todoSpan = document.createElement("span");
-    todoSpan.id="span" + todo.id;
+    todoSpan.id = "span" + todo.id;
     todoSpan.innerHTML = todo.description;
-    if(todo.done){
-      todoSpan.setAttribute("style","text-decoration :line-through;");
+    if (todo.done) {
+      todoSpan.setAttribute("style", "text-decoration :line-through;");
     }
     todoNode.appendChild(todoSpan);
 
@@ -57,7 +64,7 @@
       event.preventDefault();
 
       var description = document.getElementsByName("description")[0].value;
-      
+
       var newObj = {};
       newObj.description = description;
       // hint: todoFunctions.addTodo
@@ -71,6 +78,7 @@
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
+    window.localStorage.myList = JSON.stringify(state);
     renderState(state);
   };
 
