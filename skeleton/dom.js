@@ -57,7 +57,7 @@
       event.preventDefault();
 
       var description = document.getElementsByName("description")[0].value;
-
+      
       var newObj = {};
       newObj.description = description;
       // hint: todoFunctions.addTodo
