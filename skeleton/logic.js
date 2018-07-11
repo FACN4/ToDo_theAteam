@@ -1,7 +1,9 @@
 // Part 1. Fill in any missing parts of the todoFunction object!
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
-var todos=[];
+
+//var todos=[];
+
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
   // You do not need to understand the implementation of this function.
@@ -30,12 +32,11 @@ var todoFunctions = {
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
 
-
-newTodo.id=todoFunctions.generateId();
-
-  newArr=todoFunctions.cloneArrayOfObjects(todos);
-  newArr=newArr.concat(newTodo);
-  return newArr;
+  //var updatedTodos;
+  newTodo.id=todoFunctions.generateId();
+  updatedTodos=todoFunctions.cloneArrayOfObjects(todos); // copy the array of objects
+  updatedTodos=updatedTodos.concat(newTodo);
+  return updatedTodos;
 
 
   },
