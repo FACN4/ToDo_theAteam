@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="utf-8">
-    <title>add todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The A-List</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div id = "todo-container">
+    <header>
+      <h1>The A-List</h1>
+    </header>
+    <section id="main-content">
+      <div id="todo-container">
         <ul>
         </ul>
-    </div>
-    <form id="add-todo">
-      <input type="text" name="description" value="">
-      <input type="submit" name="" value="Submit">
-    </form>
+      </div>
+      <form id="add-todo">
+        <input type="text" name="description" value="">
+        <button type="submit" name="" value="Submit">Add</button>
+      </form>
+    </section>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
