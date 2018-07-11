@@ -27,17 +27,20 @@
 
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
-    var Strike = document.createElement("strike");
+    var strike = document.createElement("strike");
     markTodoButtonNode.addEventListener("click", function(event) {
-      var newState = todoFunctions.markTsodo(state, todo.id);
-      
+      var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(markTodoButtonNode);
 
     // add span holding description
     var todoSpan = document.createElement("span");
+    todoSpan.id="span" + todo.id;
     todoSpan.innerHTML = todo.description;
+    if(todo.done){
+      todoSpan.setAttribute("style","text-decoration :line-through;");
+    }
     todoNode.appendChild(todoSpan);
 
     // add classes for css
