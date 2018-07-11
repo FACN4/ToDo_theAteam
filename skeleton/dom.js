@@ -6,7 +6,7 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
   var state = [];
-  if (!localStorage.getItem("myList")) {
+  if ( !localStorage.getItem("myList")) {
     // Code for localStorage/sessionStorage.
     state = [
       { id: -3, description: "first todo" },
@@ -26,6 +26,9 @@
 
     // this adds the delete button
     var deleteButtonNode = document.createElement("button");
+
+    deleteButtonNode.className="btn-delete";
+    deleteButtonNode.innerHTML="X";
     deleteButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -41,17 +44,13 @@
     }
     todoNode.appendChild(todoSpan);
 
-    // add markTodo button
-    var markTodoButtonNode = document.createElement("button");
-    var strike = document.createElement("strike");
-    markTodoButtonNode.addEventListener("click", function(event) {
-      var newState = todoFunctions.markTodo(state, todo.id);
-      update(newState);
-    });
-    todoNode.appendChild(markTodoButtonNode);
+        var strike = document.createElement("strike");
+        todoSpan.addEventListener("click", function(event) {
+          var newState = todoFunctions.markTodo(state, todo.id);
+          update(newState);
+        });
 
-    // add classes for css
-    // Matt this is for you
+
     return todoNode;
   };
 
