@@ -60,7 +60,6 @@ var todoFunctions = {
       if (obj.id == idToMark) {
         obj.done = !obj.done;
       }
-
     });
     return arr;
   },
