@@ -61,6 +61,7 @@ input {
   display: inline-block;
   width: 80%;
   border: 1px solid #d3d3d3;
+  border-radius: 8px;
 }
 
 #submitBtn {
@@ -75,11 +76,13 @@ input {
   transition: 800ms ease all;
   outline: none;
   margin: 0;
+  border-radius: 8px;
 }
 
 #submitBtn:hover {
   background: #fff;
   color: #000;
+
 }
 #submitBtn:before,
 #submitBtn:after {
@@ -87,6 +90,7 @@ input {
   position: absolute;
   top: 0;
   right: 0;
+  border-radius: 8px;
   height: 2px;
   width: 0;
   background: #1aab8a;
