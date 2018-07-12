@@ -6,6 +6,7 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
   var state = [];
+  var updatedId;
   if (!localStorage.getItem("myList")) {
     // Code for localStorage/sessionStorage.
     state = [
@@ -13,6 +14,7 @@
       { id: -2, description: "second todo" },
       { id: -1, description: "third todo" }
     ]; // this is our initial todoList
+    window.localStorage.id = 0;
   } else {
     // Sorry! No Web Storage support..
     console.log(localStorage.getItem("myList"));
@@ -72,9 +74,18 @@
     });
   }
 
+  function sortByNewerId(a, b) {
+    var keyA = a.id;
+    var keyB = b.id;
+    // Compare the 2 ids
+    if (keyA < keyB) return 1;
+    return -1;
+  }
+
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
+    state = todoFunctions.sortTodos(state, sortByNewerId);
     window.localStorage.myList = JSON.stringify(state);
     renderState(state);
   };

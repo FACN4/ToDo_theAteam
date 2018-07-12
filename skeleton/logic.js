@@ -7,8 +7,9 @@
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
   // You do not need to understand the implementation of this function.
+
   generateId: (function() {
-    var idCounter = 0;
+    var idCounter = Number(localStorage.getItem("id"));
 
     function incrementCounter() {
       return (idCounter += 1);
@@ -34,6 +35,7 @@ var todoFunctions = {
     //var updatedTodos;
     var todo_new = newTodo;
     todo_new.id = todoFunctions.generateId();
+    window.localStorage.id = todo_new.id;
     todo_new.done = false;
     updatedTodos = todoFunctions.cloneArrayOfObjects(todos); // copy the array of objects
     updatedTodos = updatedTodos.concat(todo_new);
@@ -69,6 +71,10 @@ var todoFunctions = {
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
+
+    var arr = todoFunctions.cloneArrayOfObjects(todos);
+    arr.sort(sortFunction);
+    return arr;
   }
 };
 
