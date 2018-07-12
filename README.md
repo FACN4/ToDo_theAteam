@@ -6,7 +6,7 @@ This web app is a basic To-Do list app. It allows a user to add to-dos, delete t
 
 This project gave us experience of working with test-driven development (TDD), DOM manipulation and an opportunity to practice our HTML, CSS and JavaScript skills.
 
-Section 2. What?
+ ## Section 2. What?
 The website contains:
 * A header with the brand name
 * An input box for to-dos and a submit button
