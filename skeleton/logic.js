@@ -32,10 +32,11 @@ var todoFunctions = {
     // hint: array.concat
 
     //var updatedTodos;
-    newTodo.id = todoFunctions.generateId();
-    newTodo.done = false;
+    var todo_new = newTodo;
+    todo_new.id = todoFunctions.generateId();
+    todo_new.done = false;
     updatedTodos = todoFunctions.cloneArrayOfObjects(todos); // copy the array of objects
-    updatedTodos = updatedTodos.concat(newTodo);
+    updatedTodos = updatedTodos.concat(todo_new);
     return updatedTodos;
   },
   deleteTodo: function(todos, idToDelete) {
