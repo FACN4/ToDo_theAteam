@@ -19,14 +19,14 @@ The website contains:
 ## Reference - User Stories
 We met the following user stories with our website:
 
-[] Users can enter tasks into a web page so that they don't forget them<br>
-[] Users can view the tasks I have added in a list so that I can plan my day<br>
-[] Tasks can be marked as complete so that the user can focus on the tasks I have left<br>
-[] To-dos are large enough so that the user doesn't hit the wrong one with their thumb<br>
+- [ ] Users can enter tasks into a web page so that they don't forget them<br>
+- [ ] Users can view the tasks I have added in a list so that I can plan my day<br>
+- [ ] Tasks can be marked as complete so that the user can focus on the tasks I have left<br>
+- [ ] To-dos are large enough so that the user doesn't hit the wrong one with their thumb<br>
 
 ### Potential stretch goals
 We also aimed to the meet the following stretch goals:
 
-[] Users can edit their to-dos so that they can amend them if the task changes <br>
-[] Users can click on any part of a to-do to mark it as complete so that it's easier to check to-dos off <br>
-[] Users receive a visual indication of which to-do they are about to interact with so that it's clear what they're editing
+- [ ] Users can edit their to-dos so that they can amend them if the task changes <br>
+- [ ] Users can click on any part of a to-do to mark it as complete so that it's easier to check to-dos off <br>
+- [ ] Users receive a visual indication of which to-do they are about to interact with so that it's clear what they're editing
