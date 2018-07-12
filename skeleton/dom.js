@@ -28,7 +28,7 @@
     var deleteButtonNode = document.createElement("button");
 
     deleteButtonNode.className = "btn-delete";
-    deleteButtonNode.innerHTML = "X";
+    deleteButtonNode.textContent  = "X";
     deleteButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -38,7 +38,7 @@
     // add span holding description
     var todoSpan = document.createElement("span");
     todoSpan.id = "span" + todo.id;
-    todoSpan.innerHTML = todo.description;
+    todoSpan.textContent = todo.description;
     if (todo.done) {
       todoSpan.setAttribute("style", "text-decoration :line-through;");
     }
