@@ -12,7 +12,10 @@
     </header>
     <section id="main-content">
       <form id="add-todo">
-        <input type="text" name="description" value="" required>
+        <input type="text" name="description" value="" required
+        minlength="2" 
+               placeholder="Type Here... "
+        >
         <button id="submitBtn" type="submit" name="" value="Submit">Add</button>
       </form>
       <div id="todo-container">

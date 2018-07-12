@@ -61,6 +61,7 @@ input {
   display: inline-block;
   width: 80%;
   border: 1px solid #d3d3d3;
+
 }
 
 #submitBtn {
@@ -119,6 +120,7 @@ li {
   padding: 15px;
   font-size: 1em;
   background: #fff;
+  word-break: break-all;
 }
 
 /*
