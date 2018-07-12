@@ -61,7 +61,9 @@ input {
   display: inline-block;
   width: 80%;
   border: 1px solid #d3d3d3;
+
   border-radius: 8px;
+
 }
 
 #submitBtn {
@@ -135,6 +137,7 @@ li {
   font-size: 1em;
   font-style: oblique;
   background: #fff;
+  word-break: break-all;
 }
 
 /*
